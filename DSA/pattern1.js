@@ -63,3 +63,20 @@ export const reverseRightAnglePattern = (num, str) => {
     }
   }
 };
+
+export const straightPyramidStar = (a) => {
+  if (Number.isInteger(a)) {
+    let k = 1;
+    for (let i = 0; i < a; i++) {
+      let row = [];
+      for (let j = a; j > i; j--) {
+        row.push(" ");
+      }
+      for (let l = 0; l < k; l++) {
+        row.push("*");
+      }
+      k += 2;
+      log(row.join(" "));
+    }
+  }
+};
