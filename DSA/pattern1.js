@@ -80,3 +80,27 @@ export const straightPyramidStar = (a) => {
     }
   }
 };
+
+export const reversePyramidStar = (a) => {
+  if (Number.isInteger(a)) {
+    let k = a * 2 - 1;
+    for (let i = 0; i < a; i++) {
+      let row = [];
+      for (let j = 0; j <= i; j++) {
+        row.push(" ");
+      }
+      for (let l = k; l > 0; l--) {
+        row.push("*");
+      }
+      k -= 2;
+      log(row.join(" "));
+    }
+  }
+};
+
+export const rhombus = (a) => {
+  if (Number.isInteger(a)) {
+    straightPyramidStar(a);
+    reversePyramidStar(a);
+  }
+};
