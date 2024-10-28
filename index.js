@@ -5,6 +5,10 @@ import {
   straightPyramidStar,
   reversePyramidStar,
   rhombus,
+  arrowHead,
+  toggledRightAngleTriangle,
+  crownPattern,
+  IncreasingNumberRightAngledTriangle,
 } from "./DSA/pattern1.js";
 const log = console.log;
 squarePattern(2);
@@ -22,3 +26,11 @@ log();
 reversePyramidStar(5);
 log();
 rhombus(5);
+log();
+arrowHead(5);
+log();
+toggledRightAngleTriangle(5);
+log();
+crownPattern(5);
+log();
+IncreasingNumberRightAngledTriangle(5);

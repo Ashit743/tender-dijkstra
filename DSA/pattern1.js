@@ -104,3 +104,59 @@ export const rhombus = (a) => {
     reversePyramidStar(a);
   }
 };
+
+export const arrowHead = (a) => {
+  if (Number.isInteger(a) && a > 1) {
+    rightAngleTrianglePattern(a, "*");
+    reverseRightAnglePattern(a - 1, "*");
+  }
+};
+
+export const toggledRightAngleTriangle = (a) => {
+  if (Number.isInteger(a)) {
+    let rowBool = 1;
+    for (let i = 0; i < a; i++) {
+      let row = [];
+      let colBool = rowBool;
+      for (let j = 0; j <= i; j++) {
+        row.push(colBool);
+        colBool = +!colBool;
+      }
+      log(row.join(" "));
+      rowBool = +!rowBool;
+    }
+  }
+};
+
+export const crownPattern = (a) => {
+  if (Number.isInteger(a)) {
+    let l = a - 1;
+    for (let i = 1; i < a; i++) {
+      let row = [];
+      for (let j = 1; j <= i; j++) {
+        row.push(j);
+      }
+      for (let j = a - i; j > 1; j--) {
+        row.push("  ");
+      }
+      for (let j = a - l; j > 0; j--) {
+        row.push(j);
+      }
+      l--;
+      log(row.join(""));
+    }
+  }
+};
+
+export const IncreasingNumberRightAngledTriangle = (a) => {
+  if (Number.isInteger(a)) {
+    let globalIdx = 1;
+    for (let i = 0; i < a; i++) {
+      let row = [];
+      for (let j = 0; j <= i; j++) {
+        row.push(globalIdx++);
+      }
+      log(row.join(" "));
+    }
+  }
+};
