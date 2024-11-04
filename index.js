@@ -9,6 +9,7 @@ import {
   toggledRightAngleTriangle,
   crownPattern,
   IncreasingNumberRightAngledTriangle,
+  alphaRightAngledTriangle,
 } from "./DSA/pattern1.js";
 const log = console.log;
 squarePattern(2);
@@ -34,3 +35,5 @@ log();
 crownPattern(5);
 log();
 IncreasingNumberRightAngledTriangle(5);
+log();
+alphaRightAngledTriangle(5);

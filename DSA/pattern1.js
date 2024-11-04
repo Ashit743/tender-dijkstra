@@ -160,3 +160,17 @@ export const IncreasingNumberRightAngledTriangle = (a) => {
     }
   }
 };
+
+export const alphaRightAngledTriangle = (a) => {
+  if (Number.isInteger(a)) {
+    for (let i = 0; i <= a; i++) {
+      let row = [];
+      let start = 65;
+      for (let j = 0; j < i; j++) {
+        row.push(String.fromCharCode(start));
+        start++;
+      }
+      log(row.join(""));
+    }
+  }
+};
