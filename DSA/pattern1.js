@@ -174,3 +174,61 @@ export const alphaRightAngledTriangle = (a) => {
     }
   }
 };
+
+export const alphaHillPattern = (a) => {
+  if (Number.isInteger(a)) {
+    let l = 0;
+    for (let i = 0; i < a; i++) {
+      let row = [];
+      for (let j = a - i; j > 0; j--) {
+        row.push(" ");
+      }
+      let start = 65;
+      for (let j = 0; j <= i; j++) {
+        row.push(String.fromCharCode(start++));
+      }
+
+      start = 65 + l - 1;
+      for (let j = 0; j < i; j++) {
+        row.push(String.fromCharCode(start--));
+      }
+      l++;
+      log(row.join(""));
+    }
+  }
+};
+
+export const alphaTrianglePattern = (a) => {
+  if (Number.isInteger(a)) {
+    let initialStartFrom = 65 + a - 1;
+    for (let i = 0; i < a; i++) {
+      let rowDataStart = initialStartFrom;
+      let row = [];
+      for (let j = 0; j <= i; j++) {
+        row.push(String.fromCharCode(rowDataStart++));
+      }
+      initialStartFrom--;
+      log(row.join(""));
+    }
+  }
+};
+
+//incomplete
+
+export const symmetricVoidPattern = (a) => {
+  if (Number.isInteger(a)) {
+    //first half
+    for (let i = 0; i < a; i++) {
+      let row = [];
+      for (let j = a - i; j > 0; j--) {
+        row.push("*");
+      }
+      for (let j = 0; j < i; j++) {
+        row.push("  ");
+      }
+      for (let j = a - i; j > 0; j--) {
+        row.push("*");
+      }
+    }
+  }
+};

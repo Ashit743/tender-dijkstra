@@ -10,6 +10,8 @@ import {
   crownPattern,
   IncreasingNumberRightAngledTriangle,
   alphaRightAngledTriangle,
+  alphaHillPattern,
+  alphaTrianglePattern,
 } from "./DSA/pattern1.js";
 const log = console.log;
 squarePattern(2);
@@ -37,3 +39,7 @@ log();
 IncreasingNumberRightAngledTriangle(5);
 log();
 alphaRightAngledTriangle(5);
+log();
+alphaHillPattern(5);
+log();
+alphaTrianglePattern(5);
