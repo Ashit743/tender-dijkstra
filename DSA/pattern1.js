@@ -229,6 +229,21 @@ export const symmetricVoidPattern = (a) => {
       for (let j = a - i; j > 0; j--) {
         row.push("*");
       }
+      log(row.join(""));
+    }
+
+    for (let i = 0; i <= a; i++) {
+      let row = [];
+      for (let j = 0; j < i; j++) {
+        row.push("*");
+      }
+      for (let j = a - i; j > 0; j--) {
+        row.push("  ");
+      }
+      for (let j = 0; j < i; j++) {
+        row.push("*");
+      }
+      log(row.join(""));
     }
   }
 };

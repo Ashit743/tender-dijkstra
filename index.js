@@ -12,6 +12,7 @@ import {
   alphaRightAngledTriangle,
   alphaHillPattern,
   alphaTrianglePattern,
+  symmetricVoidPattern,
 } from "./DSA/pattern1.js";
 const log = console.log;
 squarePattern(2);
@@ -43,3 +44,5 @@ log();
 alphaHillPattern(5);
 log();
 alphaTrianglePattern(5);
+log();
+symmetricVoidPattern(5);
